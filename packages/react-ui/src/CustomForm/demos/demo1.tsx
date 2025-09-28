@@ -1,6 +1,6 @@
+import { CustomForm } from '@pl/react-ui';
 import { Button, Checkbox, Input, Select } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
-import { CustomForm } from 'blockify-ui';
 import React, { useRef } from 'react';
 
 const Demo1 = () => {

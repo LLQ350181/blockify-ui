@@ -8,9 +8,9 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "blockify-ui": ["src"],
-      "blockify-ui/*": ["src/*", "*"]
+      "@pl/react-ui": ["packages/react-ui/src"],
+      "@pl/react-ui/*": ["packages/react-ui/src/*", "*"]
     }
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "packages/react-ui/src/**/*"]
 }

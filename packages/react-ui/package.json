@@ -1,0 +1,19 @@
+{
+  "name": "@pl/react-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "antd": "^5.27.4",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
