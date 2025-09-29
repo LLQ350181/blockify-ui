@@ -1,3 +1,10 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # main 分支 push 触发
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
