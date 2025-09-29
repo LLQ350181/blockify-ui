@@ -19,6 +19,8 @@ const alias = pkgList.reduce((pre: any, pkg) => {
 }, {});
 export default defineConfig({
   outputPath: 'docs-dist',
+  publicPath: '/blockify-ui/',
+  base: '/blockify-ui/',       // SPA 路由基路径
   resolve: {
     docDirs: [...tailPkgList, 'docs'],
     atomDirs: atomDirs
