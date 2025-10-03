@@ -2,27 +2,12 @@
 name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches:
-      - main
-    # 这个只在 deploy_mode=auto 时生效
-    if: ${{ github.event.inputs.deploy_mode == 'auto' }}
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-      deploy_mode:
-        description: '部署模式 (auto=自动部署, manual=手动部署)'
-        required: true
-        default: 'manual'
-      deploy_branch:
-        description: '部署分支'
-        required: true
-        default: 'gh-pages'
-      build_dir:
-        description: '构建输出目录'
-        required: true
-        default: 'build'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
