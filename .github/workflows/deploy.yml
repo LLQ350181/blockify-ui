@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main # main 分支 push 触发
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,8 +24,9 @@ jobs:
       - name: Build React App
         run: pnpm docs:build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./docs-dist
+          publish_branch: gh-pages
