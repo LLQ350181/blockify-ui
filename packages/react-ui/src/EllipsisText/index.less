@@ -1,0 +1,8 @@
+.ellipsis-text {
+  display: -webkit-box; // 多行省略必需
+  -webkit-box-orient: vertical; // 设置伸展方向
+  overflow: hidden; // 隐藏溢出文本
+  text-overflow: ellipsis; // 溢出显示省略号
+  word-break: break-word; // 防止长单词撑破容器
+  width: 100%; // 自适应父元素宽度
+}

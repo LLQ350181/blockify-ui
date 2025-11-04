@@ -1,0 +1,40 @@
+.scrollable-fixed-page-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .scrollable-fixed-page {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    flex: 1;
+  }
+
+  .scroll-item {
+    background: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+  .scroll-btn.left {
+    left: -14px;
+  }
+  .scroll-btn.right {
+    right: -14px;
+  }
+}

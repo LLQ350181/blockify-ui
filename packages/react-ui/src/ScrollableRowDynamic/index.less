@@ -1,0 +1,43 @@
+.scrollable-row-dynamic-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .scrollable-row-dynamic {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .scrollable-row-dynamic::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-item {
+    flex-shrink: 0;
+  }
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s;
+  }
+  .scroll-btn:hover {
+    background: #fff;
+  }
+  .scroll-btn.left {
+    left: 4px;
+  }
+  .scroll-btn.right {
+    right: 4px;
+  }
+}

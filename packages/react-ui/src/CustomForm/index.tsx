@@ -56,10 +56,12 @@ const CustomForm: React.FC<any> = (props) => {
       return false;
     }
   };
-  const CustomFormItem = schema.map((item: any, index: any) => {
+
+  const renderSchemaItem = (item: any, index: number) => {
     let { fieldProps, formItemProps, customProps } = item;
     let { type, visibleOn, disabledOn } = customProps || {};
     let { dependencies, name } = formItemProps || {};
+
     const Field = mapper[type];
     const formItem = () => {
       return (
@@ -94,11 +96,13 @@ const CustomForm: React.FC<any> = (props) => {
       return resFormItem;
     }
     return formItem();
-  });
+  };
   return (
     <Form {...defaultFromProps} {...formProps} form={form}>
       <Row {...defaultRowProps} {...rowProps}>
-        {CustomFormItem}
+        {schema.map((item: any, index: number) =>
+          renderSchemaItem(item, index),
+        )}
       </Row>
     </Form>
   );

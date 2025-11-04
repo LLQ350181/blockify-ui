@@ -1,0 +1,62 @@
+.tooltip-wrapper {
+  display: inline-block;
+}
+
+.tooltip-box {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 10000;
+  box-sizing: border-box;
+}
+
+.tooltip-content {
+  white-space: inherit;
+  word-break: break-word;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* 上 */
+.tooltip-box.top .tooltip-arrow {
+  bottom: -4px;
+  left: var(--arrow-left, 50%);
+  transform: translateX(-50%);
+  border-width: 4px 4px 0 4px;
+  border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+}
+
+/* 下 */
+.tooltip-box.bottom .tooltip-arrow {
+  top: -4px;
+  left: var(--arrow-left, 50%);
+  transform: translateX(-50%);
+  border-width: 0 4px 4px 4px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+}
+
+/* 左 */
+.tooltip-box.left .tooltip-arrow {
+  right: -4px;
+  top: var(--arrow-top, 50%);
+  transform: translateY(-50%);
+  border-width: 4px 0 4px 4px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.75);
+}
+
+/* 右 */
+.tooltip-box.right .tooltip-arrow {
+  left: -4px;
+  top: var(--arrow-top, 50%);
+  transform: translateY(-50%);
+  border-width: 4px 4px 4px 0;
+  border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent;
+}

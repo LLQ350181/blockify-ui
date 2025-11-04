@@ -1,0 +1,34 @@
+@height: 20px;
+.ellipsis-wrap {
+  display: flex;
+  .text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    width: 100%;
+    line-height: @height;
+    &::before {
+      content: '';
+      float: right;
+      height: 100%;
+      margin-bottom: -@height;
+    }
+    .expand-btn {
+      float: right;
+      clear: both;
+      line-height: @height;
+      color: blue;
+      cursor: pointer;
+    }
+    .collapse-btn {
+      display: inline-block;
+      color: blue;
+      cursor: pointer;
+    }
+    .btn {
+      margin-left: 15px;
+    }
+  }
+}
